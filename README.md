@@ -133,11 +133,11 @@ Documentation:
 
 ---
 
-## Step 3: System Architecture Design
+## Step 3: Stakeholder Mapping
+Identification of key stakeholders including customers, support agents, managers, administrators, and business stakeholders involved in the ticketing system.
 
-Designing the data model and system architecture required for implementing the ticketing system in Salesforce.
-
----
+Documentation:
+docs/step3-stakeholder-mapping.md
 
 ## Step 4: Custom Object Creation
 
