@@ -138,11 +138,14 @@ Identification of key stakeholders including customers, support agents, managers
 
 Documentation:
 docs/step3-stakeholder-mapping.md
+---
 
-## Step 4: Custom Object Creation
+## Step 4: Execution Roadmap
 
-Creating Salesforce objects such as **Support Ticket / Case** to store customer support requests.
+Defines the phased implementation plan including requirement analysis, environment setup, data modeling, automation, reporting, testing, and deployment.
 
+Documentation:
+docs/step4-execution-roadmap.md
 ---
 
 ## Step 5: Field Configuration
