@@ -1,0 +1,150 @@
+# Project Documentation
+
+## Project Overview
+
+The **Salesforce AI-Powered Customer Support Ticketing System** is designed to centralize and automate customer support operations within Salesforce. The system manages customer information, tracks support requests, automates case management processes, and provides insights for support teams.
+
+This solution is built using **Salesforce Admin features, custom objects, automation flows, and reporting tools** within a Salesforce Developer Org.
+
+---
+
+## Core Components of the System
+
+### 1. Customer Data Management
+Customer information is managed using standard Salesforce objects:
+
+- **Account** – Stores company or organization details.
+- **Contact** – Stores individual customer information related to accounts.
+
+These objects help maintain structured customer records for support interactions.
+
+---
+
+### 2. Case Management
+Customer support requests are managed using the **Case object**.
+
+Each case records:
+- Customer issue details
+- Issue category
+- Priority level
+- Current status
+- Assigned support agent
+- SLA due date
+
+This enables support teams to track and resolve customer issues efficiently.
+
+---
+
+### 3. Custom Objects
+
+To extend system functionality, the following custom objects are implemented:
+
+**Support Category**
+- Defines different types of support issues (Technical, Billing, General Inquiry, etc.)
+
+**SLA Policy**
+- Stores rules for service-level agreements.
+- Used to determine response and resolution deadlines.
+
+**AI Feedback**
+- Captures feedback from support agents about system-generated suggestions.
+- Helps evaluate the effectiveness of automated recommendations.
+
+---
+
+### 4. Automation Using Flows
+
+The system uses **Record-Triggered Flows** to automate important case management processes.
+
+Automated processes include:
+
+- **Case Classification**
+  - Automatically assigns the correct support category.
+
+- **Priority Assignment**
+  - Sets case priority based on issue type and impact.
+
+- **SLA Due Date Calculation**
+  - Calculates the deadline for resolving the case according to the SLA policy.
+
+These automations reduce manual work and ensure consistent case handling.
+
+---
+
+### 5. Agent Assistance
+
+The system provides **suggested actions** to support agents directly on the Case record.
+
+This helps agents:
+- Quickly understand the issue
+- Follow recommended steps
+- Resolve cases more efficiently
+
+---
+
+### 6. Role-Based Access Control
+
+User access is controlled using **Profiles and Permission Sets**.
+
+Roles in the system include:
+
+| Role | Access Responsibility |
+|-----|-----------------------|
+| Support Agent | Handles and resolves customer cases |
+| Support Manager | Monitors performance and manages the support team |
+| Administrator | Configures system settings and automation |
+
+This ensures users only access the data and features relevant to their responsibilities.
+
+---
+
+### 7. Reporting and Monitoring
+
+The system includes **Reports and Dashboards** to monitor support operations.
+
+Key metrics include:
+
+- Case volume
+- Case status distribution
+- SLA compliance
+- Agent performance
+- Resolution times
+
+These insights help managers track support efficiency and identify improvement areas.
+
+---
+
+### 8. AI Feedback Collection
+
+Support agents can provide feedback on system-generated suggestions through the **AI Feedback object**.
+
+This feedback helps:
+
+- Measure the effectiveness of automation
+- Improve future recommendations
+- Enhance the overall support process
+
+---
+
+## System Benefits
+
+The AI-Powered Customer Support Ticketing System provides:
+
+- Centralized customer support management
+- Automated case classification and prioritization
+- SLA tracking for timely issue resolution
+- Improved support agent productivity
+- Data-driven decision making through reports and dashboards
+
+---
+
+## Conclusion
+
+This project demonstrates a **scalable, automation-driven customer support solution** built entirely using **Salesforce Admin tools and Flow automation** within a Developer Org.
+
+The implementation showcases best practices for:
+- Salesforce configuration
+- Process automation
+- Role-based security
+- Performance monitoring
+- Continuous system improvement
