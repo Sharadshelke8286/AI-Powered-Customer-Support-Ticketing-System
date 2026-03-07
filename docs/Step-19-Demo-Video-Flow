@@ -1,0 +1,167 @@
+# AI-Powered Customer Support Ticketing System – Demo Video Flow
+
+## Overview
+
+This section outlines the recommended structure for the **demo video presentation** of the AI-Powered Customer Support Ticketing System.  
+The video should clearly demonstrate the system features, automation logic, and reporting capabilities implemented in Salesforce.
+
+The total video duration should ideally be **5–8 minutes**.
+
+---
+
+# 1. Introduction
+
+Start the video by introducing:
+
+- Your **Sharad Shelke**
+- The **project title**: *AI-Powered Customer Support Ticketing System*
+- The **purpose of the project**
+
+Example:
+
+> "Hello, my name is Sharad Shelke. In this project, I have developed an AI-Powered Customer Support Ticketing System using Salesforce. The goal of this system is to automate case management, improve support efficiency, and track service-level agreements."
+
+---
+
+# 2. App Overview
+
+Navigate to the **Custom Lightning App** created for the project.
+
+Show the main components of the application, including:
+
+- Customer Accounts
+- Contacts
+- Cases
+- Support Category
+- SLA Policy
+- AI Feedback
+
+Explain that these objects help manage **customer support operations in a centralized system**.
+
+---
+
+# 3. UI Demonstration
+
+Demonstrate the **user interface workflow**.
+
+Steps to show:
+
+1. Create a **new Case**
+2. Enter case details
+3. Save the case
+
+Then highlight how the system automatically performs:
+
+- **Case Classification**
+- **Priority Assignment**
+- **SLA Due Date Calculation**
+- **Suggested Action for the Agent**
+
+Explain that these processes are **automated using Salesforce Flows**.
+
+---
+
+# 4. Automation Showcase
+
+Open **Salesforce Flow Builder** and briefly show the automation logic.
+
+Explain the flows used for:
+
+### Case Classification Flow
+Automatically categorizes the case based on issue details.
+
+### Priority Assignment
+Determines case priority depending on urgency.
+
+### SLA Tracking Flow
+Automatically calculates the SLA deadline for case resolution.
+
+Explain how automation **reduces manual effort and improves consistency**.
+
+---
+
+# 5. Agent Assistance & Feedback
+
+Demonstrate the **Suggested Action field** on the Case record.
+
+Explain how this helps support agents understand:
+
+- Recommended troubleshooting steps
+- Suggested solutions
+
+Also show the **AI Feedback Quick Action**.
+
+Explain that agents can submit feedback about system suggestions, which helps **improve the system over time**.
+
+---
+
+# 6. Security Setup
+
+Briefly explain the **security model**.
+
+Show the profiles created for different users:
+
+- Support Agent
+- Support Manager
+- System Administrator
+
+Explain how **permission sets** provide additional access where required.
+
+This ensures **role-based access control** within the system.
+
+---
+
+# 7. Reports
+
+Navigate to the **Reports section** and show the reports created for monitoring system performance.
+
+Examples:
+
+- Case Status Report
+- SLA Compliance Report
+- Case Volume Report
+
+Explain how these reports help managers monitor:
+
+- Support team performance
+- Case resolution efficiency
+- SLA compliance
+
+---
+
+# 8. Conclusion
+
+End the demo by summarizing the key outcomes of the project.
+
+Points to mention:
+
+- Automated case classification
+- SLA tracking
+- Agent assistance through suggested actions
+- Role-based security
+- Monitoring through reports and dashboards
+
+Also briefly mention what you **learned from the project**, such as:
+
+- Salesforce automation
+- Flow Builder
+- Data modeling
+- Security configuration
+- Reporting and monitoring
+
+---
+
+# Pro Tips for Recording the Demo
+
+- Keep the video between **5–8 minutes**
+- Speak clearly and confidently
+- Follow a **logical flow from UI → Automation → Reports**
+- Highlight **automatic case classification and SLA tracking**
+- Avoid unnecessary navigation or long pauses
+- Ensure the screen is **clear and readable**
+
+---
+
+# Result
+
+A clear and structured demo video will help viewers understand how the **AI-Powered Customer Support Ticketing System** works and how Salesforce automation improves customer support processes.
