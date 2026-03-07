@@ -1,0 +1,304 @@
+# Step 12: Agentforce AI Implementation
+
+In this step, **Agentforce AI** is used to enhance the **AI-Powered Customer Support Ticketing System** by generating **AI Suggested Replies** for support agents.
+This helps agents respond to customers faster with professional and accurate responses.
+
+---
+
+# Agentforce AI Concepts
+
+### AI Features Used
+
+* AI Case Classification
+* AI Suggested Replies
+
+### How Agentforce Works in the Project
+
+1. A **Case** is created by the customer.
+2. **AI analyzes the Case Description**.
+3. AI suggests:
+
+   * Issue Category
+   * Priority
+   * Best Response
+4. The **Support Agent reviews the AI suggestion**.
+5. The **Agent edits or sends the reply to the customer**.
+
+---
+
+# Prerequisites
+
+Before implementing Agentforce AI, ensure the following:
+
+* **Einstein AI is enabled**
+* **Agentforce is enabled**
+* You have **System Administrator permissions**
+* Custom field **AI_Suggested_Response__c** exists on the Case object
+
+---
+
+# Step 1: Enable Einstein AI
+
+1. Go to **Setup**
+2. Search **Einstein Setup**
+3. Click **Einstein Setup**
+4. Click **Get Started**
+5. Click **Turn On**
+
+If Einstein is already enabled, refresh the page.
+
+---
+
+# Step 2: Enable Prompt Builder
+
+Prompt Builder is used to create AI prompts for generating responses.
+
+Steps:
+
+1. Go to **Setup**
+2. Search **Prompt Builder**
+3. Open **Prompt Builder**
+4. Enable **Prompt Templates**
+5. Click **Save**
+
+---
+
+# Step 3: Create AI Suggested Response Field
+
+If not already created, add this field in the **Case Object**.
+
+Field Details:
+
+Field Label
+AI Suggested Response
+
+API Name
+AI_Suggested_Response__c
+
+Data Type
+Long Text Area
+
+Purpose
+Stores the AI generated reply suggestion.
+
+---
+
+# Step 4: Create Prompt Template
+
+1. Go to **Setup**
+2. Search **Prompt Builder**
+3. Click **New Prompt Template**
+
+Configuration:
+
+Template Name
+AI Suggested Response Template
+
+Type
+Field Generation
+
+Object
+Case
+
+Field
+AI_Suggested_Response__c
+
+---
+
+## Prompt Template Content
+
+Use the following prompt:
+
+```
+You are a customer support agent.
+
+Based on the following case details, generate a polite, professional, and helpful reply.
+
+Issue Type: {!Case.Issue_Type__c}
+Priority: {!Case.Priority}
+Customer Description: {!Case.Description}
+
+Provide a clear response that helps the customer resolve the issue.
+```
+
+Click **Save** and **Activate**.
+
+Assign the template as **Org Default**.
+
+---
+
+# Step 5: Configure AI Field with Prompt Template
+
+1. Open the **AI Suggested Response Field**
+2. Click the **Sparkle Icon (AI icon)**
+3. Select **Use Prompt Template**
+4. Select **AI Suggested Response Template**
+
+This allows AI to automatically generate suggested responses.
+
+---
+
+# Step 6: Open Agentforce Agent Builder
+
+1. Go to **Setup**
+2. Search **Agentforce Agents**
+3. Open **Agentforce (Default Agent)**
+
+If the agent is already active:
+
+Deactivate it before editing.
+
+Click **Open in Builder**.
+
+---
+
+# Step 7: Create Agentforce Topic
+
+Topics define what the AI agent can help with.
+
+Steps:
+
+1. Click **Topics**
+2. Click **New Topic**
+
+Configuration:
+
+Topic Name
+CST Topic
+
+Classification Description
+This topic provides suggested responses for customer cases.
+
+Scope
+Provide AI suggested responses for support cases.
+
+Instructions
+
+1. Run this topic when the user asks for a **Case Suggested Reply**.
+2. Ask the user for the **Case ID**.
+3. Generate a response based on the prompt template.
+
+Click **Save**.
+
+---
+
+# Step 8: Add General CRM Topic
+
+1. Click **Add From Library**
+2. Select **General CRM**
+3. Add it to the agent.
+
+---
+
+# Step 9: Create Agentforce Action
+
+Now create an action that connects the prompt template.
+
+Steps:
+
+1. Open **CST Topic**
+2. Click **Topic Actions**
+3. Click **New Action**
+
+Configuration:
+
+Reference Action Type
+Prompt Template
+
+Reference Action
+AI Suggested Response
+
+Agent Action Label
+AI Suggested Response
+
+Click **Next**
+
+---
+
+# Step 10: Configure Action Instructions
+
+Agent Action Instructions:
+
+```
+First ask for the Case ID.
+Then behave like a customer support agent and generate a suggested reply based on the case details.
+Provide a clear solution for the customer.
+```
+
+Additional Settings:
+
+Uncheck
+Loading Text
+
+Enable
+
+✔ Show in Conversation
+
+Click **Save**.
+
+---
+
+# Step 11: Activate the Agent
+
+1. Click **Activate**
+2. If prompted, click **Ignore and Activate**
+
+Your **Agentforce AI Agent is now live**.
+
+---
+
+# Step 12: Test the AI Agent
+
+Open the **Agentforce Chat Window** and test with prompts.
+
+Example Prompt:
+
+```
+Can you give a case solution response?
+```
+
+The agent will ask for **Case ID**.
+
+---
+
+# Step 13: Provide Case ID
+
+1. Create a **Case Record**
+2. Open the case
+3. Copy the **Case ID**
+4. Paste it into the agent chat
+
+The AI will generate a **Suggested Response**.
+
+---
+
+# Optional Prompt
+
+You can also ask:
+
+```
+Can you give case details for that ID?
+```
+
+The agent will return case information.
+
+---
+
+# Step 14: Test in Application
+
+1. Open **AI Powered CST System App**
+2. Click the **Agent Icon**
+3. Use prompts to generate suggested responses.
+
+---
+
+# Result
+
+The **Agentforce AI Agent** successfully:
+
+* Reads Case information
+* Uses Prompt Templates
+* Generates professional customer replies
+* Assists support agents in responding quickly
+
+This improves **customer support efficiency and response quality** in the AI Powered Customer Support Ticketing System.
