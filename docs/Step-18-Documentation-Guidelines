@@ -1,0 +1,242 @@
+# Guidelines for AI-Powered CST System Documentation Submission
+
+## Overview
+
+The project documentation should clearly explain the **problem statement, solution approach, and system implementation** of the **AI-Powered Customer Support Ticketing (CST) System** built in Salesforce.
+
+The documentation must be **well-structured, easy to understand, and aligned with the actual implementation in the Salesforce Developer Org**. It should demonstrate how Salesforce features such as **standard objects, custom objects, automation using flows, and AI-inspired assistance** are used to build a scalable support solution.
+
+---
+
+# Project Overview
+
+Start the documentation with a **project overview** describing:
+
+- The purpose of the system
+- The business problem it addresses
+- How the system improves customer support operations
+
+Clearly mention the use of:
+
+- **Salesforce Standard Objects**
+- **Custom Objects**
+- **Automation using Record-Triggered Flows**
+- **AI-style assistance for support agents**
+
+---
+
+# Requirement Gathering
+
+Include a section explaining how system requirements were identified.
+
+Topics to cover:
+
+- Business challenges in customer support management
+- Need for centralized case tracking
+- Importance of SLA monitoring
+- Need for automation to reduce manual work
+
+This section shows an understanding of the **business context and project goals**.
+
+---
+
+# Functional Scope
+
+Describe the main features supported by the system.
+
+Example functionalities include:
+
+- Customer account and contact management
+- Case creation and management
+- Automatic case classification
+- Priority assignment
+- SLA deadline calculation
+- Agent assistance through suggested actions
+- Feedback collection from support agents
+
+---
+
+# Stakeholder Mapping
+
+Identify the stakeholders who interact with the system.
+
+| Stakeholder | Responsibility |
+|-------------|---------------|
+| Support Agents | Handle customer support cases |
+| Support Managers | Monitor team performance and SLA compliance |
+| System Administrators | Configure system settings and automation |
+| Customers | Submit support requests |
+
+This section helps demonstrate the **business roles involved in the system**.
+
+---
+
+# System Requirements
+
+Explain the system requirements needed for implementation.
+
+### Platform
+- Salesforce Developer Org
+
+### Key Components
+- Standard Objects (Account, Contact, Case)
+- Custom Objects (Support Category, SLA Policy, AI Feedback)
+- Record-Triggered Flows
+- Profiles and Permission Sets
+- Reports and Dashboards
+
+---
+
+# Data Architecture and Object Model
+
+Explain how data is structured in the system.
+
+### Standard Objects
+- **Account** – Stores company or organization details
+- **Contact** – Stores customer information
+- **Case** – Tracks customer support issues
+
+### Custom Objects
+- **Support Category** – Defines types of support issues
+- **SLA Policy** – Stores service-level agreement rules
+- **AI Feedback** – Captures agent feedback on suggestions
+
+This section should clearly explain **how objects are connected and how data flows through the system**.
+
+---
+
+# Automation Logic
+
+Describe how automation improves system efficiency.
+
+Automation is implemented using **Record-Triggered Flows**.
+
+### Key Automations
+
+**Case Classification**
+- Automatically categorizes cases based on issue details.
+
+**Priority Assignment**
+- Assigns case priority depending on urgency and issue type.
+
+**SLA Tracking**
+- Calculates SLA due dates automatically.
+
+**Agent Assistance**
+- Provides suggested actions on the Case record to help agents resolve issues faster.
+
+---
+
+# Security and Access Control
+
+Explain how user access is controlled.
+
+### Profiles
+Profiles define the base level of access for users.
+
+Examples:
+- Support Agent
+- Support Manager
+- System Administrator
+
+### Permission Sets
+Permission sets provide additional access when needed.
+
+Examples:
+- Report Access
+- AI Feature Access
+
+This ensures **role-based access control and system security**.
+
+---
+
+# Reporting and Monitoring
+
+Reports and dashboards are used to monitor system performance.
+
+Key metrics include:
+
+- Case volume
+- Case status distribution
+- SLA compliance
+- Agent performance
+- Resolution time
+
+These reports help managers evaluate **support efficiency and operational performance**.
+
+---
+
+# AI Feedback Loop
+
+The system includes an **AI feedback mechanism** where agents can provide feedback on system-generated suggestions.
+
+This feedback helps:
+
+- Evaluate recommendation accuracy
+- Improve automation logic
+- Enhance support processes over time
+
+---
+
+# Testing
+
+Before deployment, the system should be tested to ensure:
+
+- Flows trigger correctly
+- Case classification works as expected
+- SLA calculations are accurate
+- User access permissions are correct
+
+Testing ensures the system works as intended.
+
+---
+
+# Maintenance and Troubleshooting
+
+Regular maintenance activities include:
+
+- Reviewing automation flows
+- Updating picklist values
+- Auditing profiles and permission sets
+- Monitoring system performance
+
+Troubleshooting may involve:
+
+- Checking flow errors
+- Reviewing debug logs
+- Fixing validation rule issues
+- Correcting data inconsistencies
+
+---
+
+# Learning Outcomes
+
+This project demonstrates practical knowledge of:
+
+- Salesforce Administration
+- Data modeling with standard and custom objects
+- Process automation using flows
+- Role-based security implementation
+- Reporting and dashboard creation
+- Designing scalable support solutions
+
+---
+
+# Submission Best Practices
+
+Follow these best practices when submitting documentation:
+
+- Use **clear headings and structured sections**
+- Include **relevant screenshots**
+- Keep explanations **simple and concise**
+- Avoid unnecessary theory or unused features
+- Ensure the documentation **matches the actual implementation**
+- Maintain proper **grammar and formatting**
+
+---
+
+# Conclusion
+
+The **AI-Powered Customer Support Ticketing System** demonstrates how Salesforce can be used to build a **centralized, automated, and scalable support management solution**.
+
+By combining **data management, automation, reporting, and AI-style assistance**, the system improves support efficiency, ensures SLA compliance, and enables continuous improvement through feedback.
