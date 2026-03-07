@@ -1,0 +1,195 @@
+# Step 14: Reports for AI-Powered Customer Support Ticketing System
+
+Reports help support managers monitor case workload, priority distribution, and agent performance.
+In this step, we create two important reports using the **Cases object**.
+
+---
+
+# Report 1: Open Cases by Priority
+
+## Purpose
+
+This report shows all **open cases grouped by priority** so managers can quickly identify urgent issues.
+
+---
+
+# Step-by-Step Implementation
+
+## Step 1: Open Report Builder
+
+1. Open **App Launcher**
+2. Search for **Reports**
+3. Click **Reports**
+4. Click **New Report**
+
+---
+
+# Step 2: Select Report Type
+
+1. Choose **Cases**
+2. Click **Continue**
+
+---
+
+# Step 3: Apply Filters
+
+Click **Filters** and configure the following:
+
+Show Me
+All Cases
+
+Created Date
+All Time
+
+Enable
+✔ Update Preview Automatically
+
+Add Filter:
+
+Field
+Status
+
+Operator
+Not Equal To
+
+Value
+Closed
+
+This ensures only **open cases** appear in the report.
+
+---
+
+# Step 4: Add Columns
+
+Add the following fields:
+
+* Case Number
+* Subject
+* Priority
+* Status
+* Case Owner
+
+These columns provide details about each open case.
+
+---
+
+# Step 5: Group by Priority
+
+Drag **Priority** into the **Group Rows** section.
+
+This will group cases into categories such as:
+
+* High
+* Medium
+* Low
+
+---
+
+# Step 6: Save and Run Report
+
+Click **Save & Run**
+
+Report Name
+Open Cases by Priority
+
+Report Folder
+Public Reports
+
+---
+
+# Result
+
+The report displays all **open cases grouped by priority**, helping support managers quickly identify high-priority issues.
+
+---
+
+# Report 2: Agent Performance Report
+
+## Purpose
+
+This report tracks **agent workload and efficiency** by analyzing how quickly cases are resolved.
+
+---
+
+# Step-by-Step Implementation
+
+## Step 1: Create New Report
+
+1. Go to **Reports**
+2. Click **New Report**
+3. Select **Cases**
+4. Click **Continue**
+
+---
+
+# Step 2: Apply Filters
+
+Configure the following filters:
+
+Show Me
+All Cases
+
+Created Date
+All Time
+
+Status
+Closed
+
+This ensures the report only shows **completed cases**.
+
+---
+
+# Step 3: Add Columns
+
+Add these fields:
+
+* Case Number
+* Owner
+* Priority
+* Created Date
+* Closed Date
+* Resolution Time (Hours)
+
+These fields help evaluate agent performance.
+
+---
+
+# Step 4: Group by Agent
+
+Drag **Owner** into **Group Rows**.
+
+This groups cases by the **support agent** responsible for them.
+
+---
+
+# Step 5: Add Summary Calculation
+
+1. Click the **Resolution Time (Hours)** field
+2. Select **Summarize**
+3. Choose **Average**
+
+This calculates the **average resolution time per agent**.
+
+---
+
+# Step 6: Save and Run Report
+
+Report Name
+Agent Performance Report
+
+Report Folder
+Public Reports
+
+Click **Save & Run**
+
+---
+
+# Result
+
+This report helps managers:
+
+* Measure agent productivity
+* Track resolution speed
+* Identify workload distribution
+
+It improves overall **support team performance monitoring** in the AI-powered ticketing system.
