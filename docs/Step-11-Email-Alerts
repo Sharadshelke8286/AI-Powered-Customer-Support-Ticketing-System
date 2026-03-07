@@ -1,0 +1,102 @@
+# Step 11: Email Alerts
+
+Email alerts notify customers when their support case is resolved.
+
+---
+
+# Step 1: Create Email Template
+
+Go to Setup
+
+Search **Email Templates**
+
+Click **New Email Template**
+
+Select **Classic Email Template**
+
+Related Object → **Case**
+
+---
+
+## Template Details
+
+Template Name
+Case_Resolution_Email
+
+Subject
+Your Case Has Been Resolved – {!Case.CaseNumber}
+
+Email Body
+
+Hello {!Case.Contact},
+
+Your case has been successfully resolved.
+
+Case Number: {!Case.CaseNumber}
+Status: {!Case.Status}
+
+If you have further questions, feel free to contact us.
+
+Thank you
+Support Team
+
+Click **Save**
+
+---
+
+# Step 2: Create Email Alert
+
+Go to **Setup**
+
+Search **Email Alerts**
+
+Click **New Email Alert**
+
+Configure
+
+Object → Case
+
+Email Template → Case_Resolution_Email
+
+Recipients → Contact Email
+
+Click **Save**
+
+---
+
+# Step 3: Record Triggered Flow
+
+Create **Record Triggered Flow**
+
+Object → Case
+
+Trigger → When Record Updated
+
+Condition
+
+Status = Closed
+
+---
+
+## Add Action
+
+Action Type → Send Email Alert
+
+Email Alert → Case Resolution Email
+
+---
+
+# Step 4: Activate Flow
+
+Save Flow
+
+Flow Name
+Case Resolution Email Flow
+
+Click **Activate**
+
+---
+
+# Result
+
+When a case status changes to **Closed**, the system automatically sends a **Case Resolution Email** to the customer.
