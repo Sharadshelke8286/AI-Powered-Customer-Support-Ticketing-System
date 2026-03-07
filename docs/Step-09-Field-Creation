@@ -1,0 +1,84 @@
+# Step 9: Field Creation
+
+Fields are created to store information required for the AI-powered support ticketing system.
+
+---
+
+# Activity 1: Fields in AI Feedback Object
+
+### Steps
+
+1. Go to **Setup**
+2. Open **Object Manager**
+3. Search **AI Feedback**
+4. Click **Fields & Relationships**
+5. Click **New**
+
+---
+
+## Field 1: Case Lookup
+
+Data Type → Lookup Relationship
+
+Related Object → **Case**
+
+Field Label → **Case**
+
+Click **Next**
+
+Enable **Visible**
+
+Click **Save**
+
+---
+
+## Field 2: Feedback Status
+
+Data Type → Picklist
+
+Field Label → **Feedback Status**
+
+Values
+
+* Helpful
+* Not Helpful
+
+Click **Next**
+
+Enable **Visible**
+
+Click **Save**
+
+---
+
+# Activity 2: Support Category Fields
+
+Example fields
+
+| Field         | Type      |
+| ------------- | --------- |
+| Category Name | Text      |
+| Description   | Text Area |
+| Active        | Checkbox  |
+
+---
+
+# Activity 3: SLA Policy Fields
+
+| Field           | Type     |
+| --------------- | -------- |
+| Policy Name     | Text     |
+| Priority Level  | Picklist |
+| Resolution Time | Number   |
+
+---
+
+# Activity 4: Case Object Custom Fields
+
+| Field                 | API Name                 | Type      |
+| --------------------- | ------------------------ | --------- |
+| Issue Type            | Issue_Type__c            | Picklist  |
+| SLA Due Date          | SLA_Due_Date__c          | Date/Time |
+| AI Suggested Response | AI_Suggested_Response__c | Long Text |
+
+These fields help track issue categories and SLA deadlines.
