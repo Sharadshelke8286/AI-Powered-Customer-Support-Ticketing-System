@@ -1,84 +1,83 @@
-# Step 9: Field Creation
+# Step 9: Field Creation and Object Configuration
 
-Fields are created to store information required for the AI-powered support ticketing system.
+In this step, fields are created for the custom objects and the standard **Case** object used in the **AI-Powered Customer Support Ticketing System**.
 
----
+The following objects are configured:
 
-# Activity 1: Fields in AI Feedback Object
-
-### Steps
-
-1. Go to **Setup**
-2. Open **Object Manager**
-3. Search **AI Feedback**
-4. Click **Fields & Relationships**
-5. Click **New**
+1. AI Feedback (Custom Object)
+2. Support Category (Custom Object)
+3. SLA Policy (Custom Object)
+4. Case (Standard Object)
 
 ---
 
-## Field 1: Case Lookup
+# 1. AI Feedback (AI_Feedback__c) – Custom Object
 
-Data Type → Lookup Relationship
+This object stores feedback provided by support agents on AI-generated suggestions.
 
-Related Object → **Case**
-
-Field Label → **Case**
-
-Click **Next**
-
-Enable **Visible**
-
-Click **Save**
-
----
-
-## Field 2: Feedback Status
-
-Data Type → Picklist
-
-Field Label → **Feedback Status**
-
-Values
-
-* Helpful
-* Not Helpful
-
-Click **Next**
-
-Enable **Visible**
-
-Click **Save**
+| Field Label        | API Name              | Data Type                                                            | Purpose                     |
+| ------------------ | --------------------- | -------------------------------------------------------------------- | --------------------------- |
+| AI Feedback Number | Name                  | Auto Number                                                          | Unique feedback record      |
+| Case               | Case__c               | Lookup (Case)                                                        | Related support case        |
+| Feedback Status    | Feedback_Status__c    | Picklist (Helpful, Not Helpful)                                      | Agent rating of AI output   |
+| AI Suggestion Type | AI_Suggestion_Type__c | Picklist (Case Classification, Priority Prediction, Suggested Reply) | Type of AI suggestion       |
+| Agent Comments     | Agent_Comments__c     | Long Text Area                                                       | Agent remarks on AI quality |
+| Created By         | CreatedById           | Lookup (User)                                                        | Agent who provided feedback |
+| Created Date       | CreatedDate           | Date/Time                                                            | Feedback timestamp          |
 
 ---
 
-# Activity 2: Support Category Fields
+# 2. Support Category (Support_Category__c) – Custom Object
 
-Example fields
+This object stores different categories of customer support issues.
 
-| Field         | Type      |
-| ------------- | --------- |
-| Category Name | Text      |
-| Description   | Text Area |
-| Active        | Checkbox  |
-
----
-
-# Activity 3: SLA Policy Fields
-
-| Field           | Type     |
-| --------------- | -------- |
-| Policy Name     | Text     |
-| Priority Level  | Picklist |
-| Resolution Time | Number   |
+| Field Label           | API Name            | Data Type | Purpose                     |
+| --------------------- | ------------------- | --------- | --------------------------- |
+| Support Category Name | Name                | Text      | Issue category name         |
+| Description           | Description__c      | Text Area | Category description        |
+| Default Priority      | Default_Priority__c | Picklist  | Default priority suggestion |
+| Active                | Active__c           | Checkbox  | Category availability       |
 
 ---
 
-# Activity 4: Case Object Custom Fields
+# 3. SLA Policy (SLA_Policy__c) – Custom Object
 
-| Field                 | API Name                 | Type      |
-| --------------------- | ------------------------ | --------- |
-| Issue Type            | Issue_Type__c            | Picklist  |
-| SLA Due Date          | SLA_Due_Date__c          | Date/Time |
-| AI Suggested Response | AI_Suggested_Response__c | Long Text |
+This object defines SLA rules for resolving cases based on priority.
 
-These fields help track issue categories and SLA deadlines.
+| Field Label             | API Name               | Data Type                    | Purpose                 |
+| ----------------------- | ---------------------- | ---------------------------- | ----------------------- |
+| SLA Policy Name         | Name                   | Text                         | SLA policy identifier   |
+| Priority Level          | Priority_Level__c      | Picklist (High, Medium, Low) | Case priority           |
+| Resolution Time (Hours) | Resolution_Time__c     | Number                       | Allowed resolution time |
+| Escalation Required     | Escalation_Required__c | Checkbox                     | Escalation flag         |
+
+---
+
+# 4. Case – Standard Object
+
+The **Case object** is used to track and manage customer support requests.
+
+| Field Label           | API Name                 | Data Type           | Purpose                               |
+| --------------------- | ------------------------ | ------------------- | ------------------------------------- |
+| Case Number           | CaseNumber               | Auto Number         | Unique case identifier                |
+| Subject               | Subject                  | Text                | Case title                            |
+| Description           | Description              | Long Text Area      | Customer issue text analyzed by AI    |
+| Status                | Status                   | Picklist            | Case lifecycle status                 |
+| Priority              | Priority                 | Picklist            | Case urgency (AI predicted or manual) |
+| Issue Type            | Issue_Type__c            | Picklist            | AI classified issue category          |
+| SLA Due Date          | SLA_Due_Date__c          | Date/Time           | SLA deadline                          |
+| AI Suggested Response | AI_Suggested_Response__c | Long Text Area      | AI recommended reply                  |
+| Owner                 | OwnerId                  | Lookup (User/Queue) | Assigned support agent                |
+
+---
+
+# Result
+
+After completing this step:
+
+• Custom objects store AI insights and SLA configurations
+• Case records track customer issues
+• AI suggestions and feedback are stored for analysis
+• SLA policies define response timelines
+
+These fields enable automation, reporting, and AI-assisted support within the **Salesforce Customer Support Ticketing System**.
