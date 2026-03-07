@@ -2,225 +2,247 @@
 
 ## Project Overview
 
-The **AI-Powered Customer Support Ticketing System** is a Salesforce-based solution designed to improve the efficiency of customer support operations. The system centralizes customer issue management, automates case classification, assigns priorities, tracks SLA deadlines, and assists support agents in resolving issues quickly.
+The **AI-Powered Customer Support Ticketing System** is a Salesforce-based solution designed to streamline and automate customer support operations. The system centralizes customer data, manages support requests efficiently, and improves service quality through automation and intelligent case handling.
 
-The project demonstrates the implementation of Salesforce features such as **custom objects, automation, validation rules, role-based security, and reporting** to build an intelligent and scalable support system.
+This project demonstrates how **Salesforce Admin tools, custom objects, record-triggered flows, and reporting capabilities** can be used to build a scalable customer support management system.
 
----
-
-# Problem Statement
-
-Customer support teams often handle a large number of service requests manually. This leads to:
-
-* Delayed responses to customers
-* Poor case prioritization
-* Difficulty tracking resolution time
-* Lack of visibility into support team performance
-
-To solve these issues, a centralized ticket management system is required that can automate tasks and improve support efficiency.
+The system automatically classifies support cases, assigns priorities, calculates SLA deadlines, and provides suggested actions to support agents, helping reduce manual effort and improve resolution efficiency.
 
 ---
 
-# Project Objectives
+## Problem Statement
 
-* Build a centralized ticketing system using Salesforce
-* Automate case classification and prioritization
-* Track SLA deadlines for support cases
-* Assist support agents with suggested actions
-* Improve productivity of customer support teams
-* Provide performance monitoring through reports and dashboards
+Customer support teams often face challenges such as:
 
----
+- Manual case classification
+- Delays in assigning case priority
+- Difficulty tracking Service Level Agreements (SLAs)
+- Limited visibility into support performance
+- Lack of centralized support management
 
-# Stakeholders
-
-The following stakeholders interact with the system:
-
-### Customers
-
-Submit support requests and receive issue updates.
-
-### Support Agents
-
-Manage support tickets and resolve customer issues.
-
-### Support Managers
-
-Monitor support performance and analyze reports.
-
-### System Administrators
-
-Configure system settings, automation, and security.
+These issues can lead to slower response times and poor customer experience.
 
 ---
 
-# Functional Scope
+## Solution
 
-The system provides the following key functionalities:
+The **AI-Powered CST System** solves these problems by:
 
-* Create and manage customer support tickets
-* Automatically classify cases based on issue type
-* Assign priority levels (High, Medium, Low)
-* Track Service Level Agreements (SLA)
-* Provide suggested actions to support agents
-* Allow agents to update case status
-* Capture feedback from agents on automated suggestions
-* Generate reports for monitoring support performance
+- Automating **case classification**
+- Automatically assigning **priority levels**
+- Tracking **SLA deadlines**
+- Providing **agent assistance with suggested actions**
+- Capturing **agent feedback for continuous improvement**
+- Enabling **performance monitoring through reports**
 
----
-
-# Non-Functional Requirements
-
-* Easy-to-use user interface
-* Reliable and accurate data management
-* Role-based access control
-* Secure data handling
-* Scalable system architecture
+The solution is built entirely using **Salesforce standard configuration and automation tools**.
 
 ---
 
-# System Roles
+## Key Features
 
-### Support Agent
-
-* Create and update support cases
-* View suggested solutions
-* Communicate with customers
-
-### Support Manager
-
-* Monitor support team performance
-* Access reports and dashboards
-
-### Administrator
-
-* Configure automation
-* Manage security and permissions
-* Maintain system data structure
+- Customer Account and Contact Management
+- Automated Case Classification
+- Priority Assignment Automation
+- SLA Tracking and Deadline Calculation
+- Agent Assistance via Suggested Actions
+- AI Feedback Collection Mechanism
+- Role-Based Access Control
+- Reports and Monitoring Dashboard
+- Scalable and Maintainable System Design
 
 ---
 
-# Technology Stack
+## Technologies Used
 
-| Technology               | Purpose                                    |
-| ------------------------ | ------------------------------------------ |
-| Salesforce Developer Org | Platform for building the ticketing system |
-| Salesforce Objects       | Store case and customer data               |
-| Validation Rules         | Ensure data accuracy                       |
-| Automation Flows         | Automate ticket processes                  |
-| Reports & Dashboards     | Monitor support performance                |
-| GitHub                   | Version control and project documentation  |
-
----
-
-# Project Implementation Steps
-
-## Step 1: Requirement Analysis & Planning
-
-Understanding the challenges faced by customer support teams and identifying the functional and non-functional requirements for the system.
-
-Documentation:
-`docs/step1-requirement-analysis.md`
+- Salesforce Developer Org
+- Salesforce Lightning Experience
+- Standard Objects (Account, Contact, Case)
+- Custom Objects
+- Record-Triggered Flows
+- Profiles and Permission Sets
+- Reports and Dashboards
 
 ---
 
-## Step 2: Functional Scope Definition
+## System Architecture
 
-Defining the key features and capabilities of the ticketing system including case creation, classification, priority assignment, SLA tracking, and agent assistance.
+The system is structured using both **standard Salesforce objects** and **custom objects**.
 
-Documentation:
-`docs/step2-functional-scope.md`
+### Standard Objects
 
----
+- **Account** – Stores company or organization details
+- **Contact** – Stores customer information
+- **Case** – Manages customer support tickets
 
-## Step 3: Stakeholder Mapping
-Identification of key stakeholders including customers, support agents, managers, administrators, and business stakeholders involved in the ticketing system.
+### Custom Objects
 
-Documentation:
-docs/step3-stakeholder-mapping.md
----
+- **Support Category**
+  - Defines different types of support issues
 
-## Step 4: Execution Roadmap
+- **SLA Policy**
+  - Stores service-level agreement rules for case resolution
 
-Defines the phased implementation plan including requirement analysis, environment setup, data modeling, automation, reporting, testing, and deployment.
-
-Documentation:
-docs/step4-execution-roadmap.md
----
-
-## Step 5: Field Configuration
-
-Adding required fields such as:
-
-* Customer Name
-* Issue Type
-* Priority
-* Status
-* SLA Due Date
-* Suggested Action
+- **AI Feedback**
+  - Captures agent feedback on suggested system actions
 
 ---
 
-## Step 6: Validation Rules
+## Automation Logic
 
-Implementing validation rules to ensure proper data entry and maintain data accuracy.
+Automation is implemented using **Record-Triggered Flows**.
 
----
+### Case Classification Flow
+Automatically categorizes cases based on issue details.
 
-## Step 7: Automation Implementation
+### Priority Assignment
+Determines case priority depending on urgency and issue type.
 
-Using Salesforce automation tools to:
+### SLA Tracking Flow
+Automatically calculates SLA due dates when cases are created.
 
-* Automatically classify support tickets
-* Assign priority levels
-* Calculate SLA deadlines
-
----
-
-## Step 8: Role-Based Access Control
-
-Configuring profiles, roles, and permission settings to ensure secure access to the system.
+### Agent Assistance
+Displays suggested actions on case records to guide support agents.
 
 ---
 
-## Step 9: Reports and Dashboards
+## Security Model
 
-Creating reports and dashboards to monitor support team performance and track case resolution metrics.
+The system uses **role-based access control** to manage user permissions.
+
+### Profiles
+
+- System Administrator
+- Support Agent
+- Support Manager
+
+### Permission Sets
+
+- AI Feature Access
+- Report Access
+
+This ensures users only access the data and features relevant to their responsibilities.
 
 ---
 
-# Repository Structure
+## Reporting and Monitoring
+
+Reports and dashboards are used to monitor system performance.
+
+Key reports include:
+
+- Case Status Report
+- Case Volume Report
+- SLA Compliance Report
+- Agent Performance Report
+
+These reports help managers track support efficiency and identify improvement areas.
+
+---
+
+## Project Structure
 
 ```
-AI-Powered-Customer-Support-Ticketing-System
+AI-Powered-CST-System
 │
-├── README.md
-│
-├── docs
-│   ├── step1-requirement-analysis.md
-│   └── step2-functional-scope.md
-│
-├── screenshots
-│   ├── step1
-│   └── step2
-│
-└── architecture
+├── Step-01-Project-Setup
+├── Step-02-Custom-Object
+├── Step-03-Fields
+├── Step-04-Validation-Rules
+├── Step-05-Email-Alerts
+├── Step-06-Flows
+├── Step-07-Agentforce-AI
+├── Step-08-Tabs
+├── Step-09-Lightning-App
+├── Step-10-Reports
+├── Step-11-Profiles
+├── Step-12-Permission-Sets
+├── Step-13-User-Creation
+├── Step-14-Testing
+├── Step-15-Deployment
+├── Step-16-Documentation
+├── Step-17-Maintenance-Monitoring-Troubleshooting
+├── Step-18-Documentation-Guidelines
+├── Step-19-Demo-Video-Flow
+└── Step-20-Project-Conclusion
 ```
 
 ---
 
-# Expected Benefits
+## Demo Video
 
-* Faster case resolution
-* Improved agent productivity
-* Better case management
-* Increased customer satisfaction
-* Real-time monitoring of support operations
+A demonstration video of the project explains:
+
+- App overview
+- Case creation and automation
+- Flow logic
+- Agent assistance
+- Security setup
+- Reports and monitoring
+
+*(Add your demo video link here)*
+
+Example:
+
+```
+Demo Video: https://your-video-link
+```
 
 ---
 
-# Author
+## Testing
+
+The system was tested to ensure:
+
+- Cases trigger automation correctly
+- Priority assignment works properly
+- SLA calculations are accurate
+- User access permissions are correctly applied
+- Reports display accurate data
+
+---
+
+## Maintenance and Monitoring
+
+Regular maintenance includes:
+
+- Reviewing automation flows
+- Updating picklist values
+- Monitoring system performance
+- Auditing user access permissions
+- Reviewing agent feedback data
+
+This ensures the system remains stable and aligned with business requirements.
+
+---
+
+## Learning Outcomes
+
+This project provided hands-on experience with:
+
+- Salesforce Administration
+- Data Modeling
+- Process Automation with Flows
+- Role-Based Security Configuration
+- Reporting and Dashboard Creation
+- System Monitoring and Maintenance
+
+---
+
+## Conclusion
+
+The **AI-Powered Customer Support Ticketing System** demonstrates how Salesforce can be used to build a scalable and automated support management solution.
+
+By combining **automation, structured data management, security controls, and reporting**, the system improves support efficiency, ensures SLA compliance, and supports continuous improvement through feedback.
+
+This project showcases practical Salesforce implementation skills and serves as a strong example of a real-world support automation solution.
+
+---
+
+## Author
 
 **Sharad Shelke**
 
-Salesforce Project – Skill Wallet
+Salesforce Administrator Project
+
+GitHub Repository for Learning and Demonstration
