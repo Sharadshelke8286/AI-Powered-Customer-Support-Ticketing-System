@@ -1,0 +1,191 @@
+# Step 16: Creating Users for the Project
+
+In this step, we create users for the **AI-Powered Customer Support Ticketing System** to simulate real-world roles in the organization.
+
+Each user is assigned a **Profile** created in the previous step to control system access.
+
+---
+
+# Users to Create
+
+| Role         | Profile              |
+| ------------ | -------------------- |
+| Admin User   | System Administrator |
+| Agent User   | Support Agent        |
+| Manager User | Support Manager      |
+
+---
+
+# Step 1: Open Users Setup
+
+1. Log in to **Salesforce Developer Org**
+2. Click **Setup**
+3. In the **Quick Find** search box, search **Users**
+4. Click **Users**
+5. Click **New User**
+
+---
+
+# Step 2: Create Admin User
+
+Click **New User** and enter the following details.
+
+### User Information
+
+First Name
+Admin
+
+Last Name
+User
+
+Alias
+admin
+
+Email
+[admin.cst@demo.com](mailto:admin.cst@demo.com)
+
+Username
+[admin.cst@demo.com](mailto:admin.cst@demo.com)
+
+Role
+Leave blank (or select if roles are created)
+
+### User License
+
+Salesforce
+
+### Profile
+
+System Administrator
+
+Locale settings can remain default.
+
+Ensure **Active** is checked.
+
+Click **Save**
+
+---
+
+# Step 3: Create Support Agent User
+
+From the **Users page**, click **New User**.
+
+### User Information
+
+First Name
+Support
+
+Last Name
+Agent
+
+Alias
+agent
+
+Email
+[agent.cst@demo.com](mailto:agent.cst@demo.com)
+
+Username
+[agent.cst@demo.com](mailto:agent.cst@demo.com)
+
+### User License
+
+Salesforce
+
+### Profile
+
+Support Agent
+
+Ensure **Active** is checked.
+
+Click **Save**
+
+---
+
+# Step 4: Create Support Manager User
+
+Click **New User** again.
+
+### User Information
+
+First Name
+Support
+
+Last Name
+Manager
+
+Alias
+manager
+
+Email
+[manager.cst@demo.com](mailto:manager.cst@demo.com)
+
+Username
+[manager.cst@demo.com](mailto:manager.cst@demo.com)
+
+### User License
+
+Salesforce
+
+### Profile
+
+Support Manager
+
+Ensure **Active** is checked.
+
+Click **Save**
+
+---
+
+# Step 5: Verify Users
+
+1. Go to **Setup → Users**
+2. Confirm that all three users appear in the list.
+
+Verify:
+
+* Profile assignment
+* Active status
+* Correct usernames
+
+---
+
+# Step 6: (Optional) Assign Permission Sets
+
+If permission sets were created earlier, assign them to users.
+
+Steps:
+
+1. Open the **User Record**
+2. Click **Permission Set Assignments**
+3. Click **Edit Assignments**
+4. Add required permission sets
+
+Examples:
+
+* **AI Feature Access** → Support Agents
+* **Report Access** → Support Managers
+
+Click **Save**
+
+---
+
+# Final Validation Checklist
+
+Ensure the following:
+
+✔ Each user has **one profile**
+✔ All users are **Active**
+✔ **Usernames are unique**
+✔ Profiles match their **roles**
+
+---
+
+# Result
+
+After completing this step:
+
+* **Admin User** manages the system configuration.
+* **Support Agent User** handles customer support cases.
+* **Support Manager User** monitors reports and team performance.
+
+This setup simulates a **real-world support team structure** in the AI-Powered Customer Support Ticketing System.
