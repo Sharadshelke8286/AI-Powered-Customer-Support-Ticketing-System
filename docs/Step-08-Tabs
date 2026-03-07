@@ -1,0 +1,73 @@
+# Step 8: Custom Tabs Creation
+
+Custom tabs are created in Salesforce to allow users to easily access custom objects from the navigation bar.
+
+## Activity 1: Creating a Custom Tab (Support Category)
+
+### Steps
+
+1. Go to **Setup**
+2. Search **Tabs** in the **Quick Find** bar
+3. Click **Tabs**
+4. Under **Custom Object Tabs**, click **New**
+
+### Configure Tab
+
+* Object → **Support Category**
+* Select any **Tab Style**
+* Click **Next**
+
+### Profile Settings
+
+Keep default settings for **Add to Profiles**
+
+Click **Next**
+
+### App Settings
+
+Keep default settings for **Add to Apps**
+
+Click **Save**
+
+---
+
+## Activity 2: Creating a Custom Tab (SLA Policy)
+
+Follow the same process.
+
+Object → **SLA Policy**
+
+Steps
+
+1. Setup → Tabs
+2. Custom Object Tabs → **New**
+3. Select **SLA Policy**
+4. Choose Tab Style
+5. Next → Keep Default Profile Access
+6. Next → Keep Default App Settings
+7. Click **Save**
+
+---
+
+## Activity 3: Creating a Custom Tab (AI Feedback)
+
+Steps
+
+1. Setup → Tabs
+2. Custom Object Tabs → **New**
+3. Select Object → **AI Feedback**
+4. Select any **Tab Style**
+5. Click **Next**
+6. Keep Profile settings as **Default**
+7. Keep App settings as **Default**
+8. Click **Save**
+
+### Result
+
+Users can now access:
+
+* Support Category
+* SLA Policy
+* AI Feedback
+
+directly from the Salesforce navigation bar.
