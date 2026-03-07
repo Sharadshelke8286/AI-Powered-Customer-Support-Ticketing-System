@@ -1,0 +1,68 @@
+# Step 10: Validation Rule
+
+## Rule Name
+
+SLA_Due_Date_Required_For_High_Priority
+
+## Purpose
+
+Ensures that High Priority cases always have an SLA Due Date.
+
+---
+
+## Steps
+
+1. Go to **Setup**
+2. Open **Object Manager**
+3. Select **Case**
+4. Click **Validation Rules**
+5. Click **New**
+
+---
+
+## Rule Details
+
+Rule Name
+SLA_Due_Date_Required_For_High_Priority
+
+Description
+Ensures SLA Due Date is populated for High priority cases.
+
+---
+
+## Validation Formula
+
+```
+AND(
+ISPICKVAL(Priority, "High"),
+ISBLANK(SLA_Due_Date__c)
+)
+```
+
+---
+
+## Error Message
+
+SLA Due Date must be populated for High priority cases.
+
+Error Location → **SLA Due Date Field**
+
+Click **Save**
+
+---
+
+## Testing
+
+Test Case 1
+
+Priority → High
+SLA Due Date → Empty
+
+Result → Error message appears
+
+Test Case 2
+
+Priority → High
+SLA Due Date → Filled
+
+Result → Case saved successfully
