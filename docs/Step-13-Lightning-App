@@ -1,0 +1,105 @@
+# Step 13: Create a Lightning App
+
+In this step, we create a **Lightning App** to organize and access all components of the **AI-Powered Customer Support Ticketing System (CST System)** in one place.
+
+This app provides a centralized interface for support agents to manage **Cases, SLA Policies, Support Categories, and AI Feedback**.
+
+---
+
+# Activity 1: Create Lightning App
+
+## Step 1: Open App Manager
+
+1. Go to **Setup**
+2. In the **Quick Find** search bar, type **App Manager**
+3. Click **App Manager**
+4. Click **New Lightning App**
+
+---
+
+# Step 2: Configure App Details
+
+Fill the following information:
+
+App Name
+AI-Powered CST System
+
+Developer Name
+Automatically populated
+
+Description
+AI-powered customer support ticketing system for managing cases, SLA policies, and AI-generated responses.
+
+Image
+Optional (can upload a logo if desired)
+
+Primary Color Hex Value
+Keep the default value.
+
+Click **Next**
+
+---
+
+# Step 3: Configure App Options
+
+Leave all settings **as default**.
+
+Click **Next**
+
+---
+
+# Step 4: Configure Utility Items
+
+Leave the **Utility Items page as default**.
+
+Click **Next**
+
+---
+
+# Step 5: Add Navigation Items
+
+Add the following navigation items by searching and moving them using the arrow button.
+
+Recommended Items:
+
+* Home
+* Cases
+* Support Category
+* SLA Policy
+* AI Feedback
+* Reports
+* Dashboards
+
+These objects allow agents to manage customer support cases and related AI insights.
+
+Click **Next**
+
+---
+
+# Step 6: Assign User Profiles
+
+1. Search for **System Administrator**
+2. Select it
+3. Move it using the arrow button
+
+This allows administrators to access the new application.
+
+Click **Save & Finish**
+
+---
+
+# Result
+
+The **AI-Powered CST System Lightning App** is successfully created.
+
+Support agents can now access:
+
+* Cases
+* Support Categories
+* SLA Policies
+* AI Feedback
+* Reports and Dashboards
+
+from a **single centralized application** in Salesforce.
+
+This app acts as the main interface for managing the **AI-Powered Customer Support Ticketing System**.
